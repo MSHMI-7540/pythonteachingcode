@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Form and Table</title><head>
+            <style type="text/css">
+                td { width: 500px; word-wrap: break-word}
+            </style>
+        </head>
+    </head>
+    <body>
+        <h1>KnowYourMeds</h1>
+        <form method="POST">
+            <label for="condition">Search for a condition:</label><br>
+            <input type="text" id="condition" name="condition"><br><br>
+            <label for="results">Number of rows to conduct search on:</label><br>
+            <input type="text" id="results" name="results"><br><br>
+            <input type="submit" value="Submit">           
+        </form>
+
+        {% if results %}
+            <h2>Results</h2>
+            <table border="1" cellpadding="8" cellspacing="5" >
+                <thead>
+                    <tr>               
+                            <th>Brand Name</th>
+                            <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in results %}
+                        <tr>
+                            <!--{% for header in headers %}
+                                <td >{{ row[header] }}</td>
+                            {% endfor %}-->
+                            <td><a href={{ row['Daily Med URL'] }} target="_blank">{{ row['Brand Name'] }}</a></td>
+                            <td>{{ row['Purpose'] }}</td>          
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </body>
+    </html>
