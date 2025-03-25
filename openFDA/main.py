@@ -36,7 +36,7 @@ def home():
 
 def process_data(data,results = 100):
     # store parameters in a variable
-    search_criteria = data
+    search_criteria = data.lower()
     result_limit = results
     url = "https://api.fda.gov/drug/label.json?"
     params = {"search": search_criteria, "limit": result_limit}
