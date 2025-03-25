@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+    <meta name="viewport" 
+          content="width=device-width, 
+                   initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity=
+"sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+        <title>Form and Table</title><head>
+            
+        </head>
+    </head>
+    <body>
+      
+        <header class="masthead bg-secondary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">                
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">KnowYourMeds</h1>
+               
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Be an informed and active participant in your own healthcare</p>
+                <div class="btn-toolbar p-2" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2 p-2" role="group" aria-label="First group">
+                        <button class="btn btn btn-secondary mr-1 p-2" onclick="window.location.href='{{ url_for('about') }}'">About</button>
+                        <button class="btn btn btn-secondary mr-1 p-2" onclick="window.location.href='{{ url_for('home') }}'">Home</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class= container >
+          <div class="row">
+            <div class="col-sm-6 col-lg-3 p-4">
+                <div class="card h-100 bg-dark">
+                      <div class="card h-100 bg-secondary"><div class="card-header">
+                          <h5 class="card-title text-center text-white">Why KNOWYOURMEDS?</h5>
+                      </div>
+                      <div class="card-body text-white">
+                      <p class="card-text"><a href ="https://evokad.com/healthcare-marketing-statistics-google/" target="_blank" class="link-info text-decoration-none">DID YOU KNOW </a>Google receives more than 1 billion health-related questions every day? 45% have looked online for information about prescription or over-the-counter medications.</p>
+                      <p class="card-text"></p>
+                      <p class="card-text">KNOWYOURMEDS helps to streamline and improve the process of finding information about over-the-counter medications, making it safer and more efficient.</p>
+                      <p></p>
+                      </div>
+                </div>
+              </div>
+          </div>
+            <div class="col-sm-6 col-lg-3 p-4">
+                <div class="card h-100 bg-dark">
+                      <div class="card h-100  bg-secondary"><div class="card-header">
+                          <h5 class="card-title text-center text-white">Be Informed</h5>
+                      </div>
+                      <div class="card-body text-white">
+                      <p class="card-text">KNOWYOURMEDS is designed to give you information about over-the-counter (OTC) medications.</p>
+                      <p class="card-text">You don't have to sift through irrelevant or poor-quality search results.</p>
+                      <p class="card-text">You can have more confidence in the information you receive and focus on medications that you can buy without a prescription.</p>
+                      <p></p>
+                      </div>
+                </div>
+              </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 p-4">
+              <div class="card h-100 bg-dark">
+                    <div class="card h-100  bg-secondary"><div class="card-header">
+                        <h5 class="card-title text-center text-white">Credible Sources</h5>
+                    </div>
+                    <div class="card-body text-white">
+                    <p class="card-text">KNOWYOURMEDS uses data from OpenFDA and DailyMed.</p>
+                    <p class="card-text"><a href ="https://open.fda.gov/" target="_blank" class="link-info text-decoration-none">OpenFDA</a> empowers patients by providing access to information that they may not otherwise have.</p>
+                    <p class="card-text">The information on <a href ="https://dailymed.nlm.nih.gov/dailymed/" target="_blank" class="link-info text-decoration-none">DailyMed</a> is sourced from the FDA and represents the most recent submitted labeling by companies, ensuring patients have access to the latest information. .</p>
+                    <p></p>
+                    </div>
+              </div>
+            </div>
+        </div>
+            <div class="col-sm-6 col-lg-3 p-4">
+                <div class="card h-100 bg-dark">
+                      <div class="card h-100 bg-secondary"><div class="card-header">
+                          <h5 class="card-title text-center text-white">Meet Our Team</h5>
+                      </div>
+                      <div class="card-body text-white">
+                      <p class="card-text">Rekha Renduchintala is a technology enthisiast and currently pursing her Master's in Healthcare Management and Informatics at KSU.</p>
+                      <p class="card-text">Alexis Francis is currently pursing her Master's in Healthcare Management and Informatics at KSU.</p>
+                      <p class="card-text">They both share the common goal of educating patients and help them make informed decisions.</p>
+                      </div>
+                </div>
+              </div>
+          </div>
+        </div>
+    </body>
+    </html>

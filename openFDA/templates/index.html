@@ -1,6 +1,20 @@
 <!DOCTYPE html>
     <html>
     <head>
+        <meta charset="utf-8" />
+    <meta name="viewport" 
+          content="width=device-width, 
+                   initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity=
+"sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
         <title>Form and Table</title><head>
             <style type="text/css">
                 td { width: 500px; word-wrap: break-word}
@@ -8,18 +22,45 @@
         </head>
     </head>
     <body>
-        <h1>KnowYourMeds</h1>
-        <form method="POST">
-            <label for="condition">Search for a condition:</label><br>
-            <input type="text" id="condition" name="condition"><br><br>
-            <label for="results">Number of rows to conduct search on:</label><br>
-            <input type="text" id="results" name="results"><br><br>
-            <input type="submit" value="Submit">           
-        </form>
+        <header class="masthead bg-secondary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">                
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">KnowYourMeds</h1>
+               
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Be an informed and active participant in your own healthcare</p>
+                <div class="btn-toolbar p-2" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2 p-2" role="group" aria-label="First group">
+                        <button class="btn btn btn-secondary mr-1 p-2" onclick="window.location.href='{{ url_for('about') }}'">About</button>
+                        <button class="btn btn btn-secondary mr-1 p-2" onclick="window.location.href='{{ url_for('home') }}'">Home</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+            <form method="POST">
+                <div class = "container container-sm p-2">
+                <table class="table table-success table-striped table-hover">
+                    
+                    <tbody>
+                            <tr>
+                                <td><label for="condition">Search for a condition:</label></td>
+                                <td><input type="text" id="condition" name="condition"></td>
+                            <tr>        
+                        <td><label for="results">Number of rows to conduct search on:</label></td>
+                        <td><input type="text" id="results" name="results"></td>
+                    </tr>
+                    <tr> 
+                        <td><input type="submit" value="Submit"></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+                
+            </form>
 
         {% if results %}
             <h2>Results</h2>
-            <table border="1" cellpadding="8" cellspacing="5" >
+            <table class="table table-bordered" >
                 <thead>
                     <tr>               
                             <th>Brand Name</th>
