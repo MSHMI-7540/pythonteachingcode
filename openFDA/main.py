@@ -4,6 +4,7 @@ import json
 #from daily_med import DailyMed
 #dm = DailyMed()
 
+#create an instance of the flask class and assign it to variable app
 app = Flask(__name__)
 
 #default route, displays about page
@@ -23,7 +24,9 @@ def home():
     if request.method == 'POST':
         # Process form data
         #store the user input "condition" value to a variable
+        #itch
         data = request.form['condition']
+        #200
         #store the user input "conduct search on" value to a variable
         resultCount = request.form['results']
         #call process_data function with necessary arguments
@@ -41,6 +44,7 @@ def process_data(data,results = 100):
     url = "https://api.fda.gov/drug/label.json?"
     params = {"search": search_criteria, "limit": result_limit}
     #process to get information from website (openFDA)
+    #https://api.fda.gov/drug/label.json?search=itch&limit=100
     response = requests.get(url,params=params)
 
     if response.status_code == 200:
@@ -72,3 +76,29 @@ def process_data(data,results = 100):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+"""
+steps to host the app on heroku
+
+Heroku:
+Heroku is a cloud platform as a service that simplifies the process of  deploying and managing web applications.
+
+1. create heroku login
+
+add dependencies to your project
+2.npm install heroku
+
+The Heroku CLI is a tool that allows you to manage your Heroku applications directly from your terminal
+3.install heroku cli
+
+4. I have restarted the vscode after these installations
+
+green unicorn: webserver gateway interface that acts as a bridge b/w python web app and web server
+5. pip install gunicorn
+
+6. create a requirements.txt file
+
+declares what commands should be executed by heroku
+7. procfile
+
+"""
